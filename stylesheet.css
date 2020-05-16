@@ -1,7 +1,7 @@
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 10%;
+    font-family: helvetica;
+    margin: 3%;
 }
 
 div {
@@ -10,47 +10,88 @@ div {
 
 .date {
     color: rgb(8, 197, 255);
-    font-size: 50px;
+    font-size: 52px;
+    font-weight: bold;
     float: left;
 }
 
 .menu {
-    color: rgb(8, 197, 255);
+    color: rgb(255, 89, 153);
+    font-weight: bold;
+    background-color: white;
+    border: solid;
+    border-radius: 5px;
+    margin: 11px;
+    padding: 8px;
+    width: 35px;
     float: left;
+    cursor: pointer;
 }
 
 .plantsList {
     color: rgb(22, 161, 41);
-    font-size: 25px;
-    width: 30%;
+    font-size: 20px;
+    border: solid;
+    border-color: rgb(252, 236, 17);
+    border-radius: 5px;
+    border-width: 5px;
+    width: 307px;
     float: left;
     clear: left;
+    text-align: left;
+    margin-right: 5%;
+    margin-bottom: 2%;
+    padding: 5px;
+    cursor: pointer;
 }
 
 .notepad {
     height: 400px;
-    width: 40%;
+    width: 42%;
     border: solid;
     border-color:rgb(161, 117, 73);
     border-width: 30px;
-    border-radius: 25px;
+    border-radius: 10px;
     background-color: rgb(233, 222, 212);
-    color: rgb(47, 48, 73);
+    color: rgb(11, 11, 12);
     padding: 20px;
     overflow: auto;
     float: left;
 }
 
 
-.buttons1 {
+.button1 {
+    color: rgb(150, 100, 231);
+    font-weight: bold;
+    background-color: white;
+    border: solid;
+    border-radius: 5px;
     float: left;
     clear: left;
     margin-top: 10px;
-    width: 33%;
+    width: 105px;
+    padding: 2px;
 }
 
-.buttons2 {
+.button2 {
+    color: rgb(255, 89, 153);
+    background-color: white;
+    border: solid;
+    border-radius: 5px;
     float: left;
     margin-top: 10px;
-    width: 33%;
+    width: 150px;
+    padding: 3px;
+}
+
+.button3 {
+    color: rgb(255, 89, 153);
+    background-color: white;
+    border: solid;
+    border-radius: 5px;
+    float: left;
+    margin-top: 10px;
+    width: 40px;
+    padding: 3px;
+    cursor: pointer;
 }
