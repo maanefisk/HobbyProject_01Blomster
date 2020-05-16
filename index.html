@@ -8,10 +8,16 @@
     <script src="script.js"></script>
 </head>
 <body>
-    <div id="container"></div>
+    <div id="container" class="container"></div>
+
     <script>
         // view
         updateView();
+        function updateView() {
+            if (model.selectedPage === 'dailyTasks') {
+                updateViewDailyTasks();
+            } 
+        }
     </script>
 </body>
 </html>

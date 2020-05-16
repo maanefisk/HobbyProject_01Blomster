@@ -1,37 +1,69 @@
 // model
 
 const model = {
-    todaysDate: "",
+plants = [ 
+    {name: "Salvie",
+    id: "salvie",
+    water: 7,
+    feed: 14,
+    cut: 14,
+    newPot: 365,},
 
-    plants: [
-        { 
-            id: "salvie", name: 'Salvie', 
-            tasks: {
-                water: { frequencyDays: 1, lastDate: '2020-05-15'},
-            },
-        },
-        {
-            id: "lovemunn", name: 'Løvemunn',
-            tasks: {
-                water: { frequencyDays: 1, lastDate: '2020-05-15'},
-            },
-        },
-    ],
+    {name: "Løvemunn",
+    id: "lovemunn",
+    water: 1,
+    feed: 7,
+    cut: 7,
+    newPot: 365,}
+    ]
 };
 
+var container = document.getElementById('container');
 // controller
+updateView();
 function updateView() {
-    document.getElementById('container').innerHTML = `
-    <div class="date">
+
+    let html = `
+
+    <div id="date" class="date">
         ${todaysDate()}
     </div>
-    <div class="plantsList">
-        ${plantsList()}
-    </div>
-    <div class="notepad">
+
+    <table id="plantsList" class="plantsList">
+    <tr>
+        <th>Plante</th>
+        <th>Vanning</th>
+        <th>Gjødsel</th>
+        <th>Klipping</th>
+        <th>Ompotting</th>
+        <th>Utsett</th>
+    </tr>
+    </table>
+
+    <div id="notepad" class="notepad">
         ${createNotepad()}
     </div>
-    <input class="addPlantInput" type="text" onchange="addPlant()"/>
+    
+    <input id="addPlantInput" class="addPlantInput" type="text" onchange="addPlant()"/>
+    `;
+for (let i = 0; i < plants.length; i++) {
+html += createHtmlRow(i);
+}
+container.innerHTML = html;
+}
+
+function createHtmlRow(i) {
+const plant = plants[i];
+return `<table id="plantsList" class="plantsList">
+        <tr>
+            <th>Plante</th>
+            <th>Vanning</th>
+            <th>Gjødsel</th>
+            <th>Klipping</th>
+            <th>Ompotting</th>
+            <th>Utsett</th>
+        </tr>
+        </table>
     `;
 }
 
