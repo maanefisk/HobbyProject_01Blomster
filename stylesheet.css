@@ -31,7 +31,7 @@ div {
 .plantsList {
     color: rgb(8, 177, 30);
     font-size: 15px;
-    width: 307px;
+    width: 308px;
     float: left;
     clear: left;
     text-align: left;
@@ -54,7 +54,7 @@ th {
     border: solid;
     border-color:rgb(161, 117, 73);
     border-width: 30px;
-    border-radius: 30px;
+    border-radius: 10px;
     background-color: rgb(233, 222, 212);
     color: rgb(11, 11, 12);
     padding: 20px;
@@ -65,7 +65,6 @@ th {
 
 .button1 {
     color: rgb(150, 100, 231);
-    font-weight: bold;
     background-color: white;
     border: solid;
     border-radius: 5px;
@@ -97,4 +96,16 @@ th {
     width: 40px;
     padding: 3px;
     cursor: pointer;
+}
+
+img {
+    width: 50%;
+    float: left;
+    margin-right: 20px;
+    border-radius: 3px;
+}
+
+h3 {
+    margin: 0px;
+    padding-bottom: 5px;
 }
