@@ -9,18 +9,20 @@
 <body>
     <div id="container" class="container"></div>
 <script>
+
 //help
 var container = document.getElementById('container');
-updateView();
-//model
 
-var plants = [
+
+//model
+let plants = [
         { id: 'salvie', name: 'Salvia Officinalis' , water: 7, feed: 14 , cut: 14, pot: 365, },
         { id: 'løvemunn', name: 'Antirrhinum majus' , water: 2, feed: 7 , cut: 7, pot: 365, },
     ];
-concole.log(plants.length);
+updateView();    
 //view
 function updateView() {
+    
     let firstHtml = `<div class="container">
 
     <div class="date">${todaysDate()}</div>
@@ -57,18 +59,20 @@ function updateView() {
 
     </div>
         `;
-    for (let i = 0; i < plants.length; i++){
-        firstHtml + (html += createHtmlRow(i)) + thirdHtml;
+    for (let i = 1; i < plants.length; i++){
+         html += createHtmlRow(i) ;
     }
-    container.innerHTML = html;
+    container.innerHTML = firstHtml + html + thirdHtml;
     }
 
+
+    
 //controller
 function createHtmlRow(i) {
     const plant = plants[i];
     return `
     <tr>
-            <th>Salvie</th>
+            <th>Løvemunn</th>
             <th>💧</th>
             <th>❤</th>
             <th>✂</th>
