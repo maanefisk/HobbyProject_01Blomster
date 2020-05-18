@@ -15,6 +15,10 @@ div {
     float: left;
 }
 
+.container {
+    margin: 10px;
+}
+
 .menu {
     color: rgb(255, 89, 153);
     font-weight: bold;
@@ -74,6 +78,7 @@ th {
     margin-top: 10px;
     width: 105px;
     padding: 2px;
+    cursor: pointer;
 }
 
 .button2 {

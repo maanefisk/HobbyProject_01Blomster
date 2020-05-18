@@ -22,34 +22,10 @@ var container = document.getElementById('container');
 // controller
 updateView();
 function updateView() {
-
-    let html = `
-
-    <div id="date" class="date">
-        ${todaysDate()}
-    </div>
-
-    <table id="plantsList" class="plantsList">
-    <tr>
-        <th>Plante</th>
-        <th>Vanning</th>
-        <th>Gjødsel</th>
-        <th>Klipping</th>
-        <th>Ompotting</th>
-        <th>Utsett</th>
-    </tr>
-    </table>
-
-    <div id="notepad" class="notepad">
-        ${createNotepad()}
-    </div>
-    
-    <input id="addPlantInput" class="addPlantInput" type="text" onchange="addPlant()"/>
+    html = container;
+    html.innerHTML = `
+    <div class="date">16.05.2020</div>
     `;
-for (let i = 0; i < plants.length; i++) {
-html += createHtmlRow(i);
-}
-container.innerHTML = html;
 }
 
 function createHtmlRow(i) {
