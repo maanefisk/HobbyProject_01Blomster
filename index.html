@@ -11,7 +11,7 @@
 <script>
 
 //help
-var container = document.getElementById('container');
+let container = document.getElementById('container');
 
 
 //model
@@ -19,6 +19,7 @@ let plants = [
         { id: 'salvie', name: 'Salvie' , latinName: 'Salvia Officinalis' , water: 7, feed: 14 , cut: 14, pot: 365, },
         { id: 'løvemunn', name: 'Løvemunn' , latinName: 'Antirrhinum majus' , water: 2, feed: 7 , cut: 7, pot: 365, },
     ];
+
 updateView();    
 //view
 function updateView() {
@@ -46,7 +47,11 @@ function updateView() {
         <option>Collection 1</option>
         <option>Collection 2</option>
     </select>
-    <input type="text" id="plantInput" class="button2"/><button onclick="addTask()" class="button3">Add</button>
+    <input type="text" id="plantInput" class="button2"/>
+    <div id="dateButton" class="dateButton">
+    <button onclick="openTimeSliders()" class="button3">🕑</button>
+    </div>
+    <button onclick="addTask()" class="button4">Add</button>
 
     </div>
         `;
@@ -61,6 +66,19 @@ function updateView() {
 //controller
 
 let plantInput = document.getElementById('plantInput');
+let dateButton = document.getElementById('dateButton');
+
+function openTimeSliders() {
+    dateButton.innerHTML = `
+    <input type="range" id="plantInput" class="slider" min="1" max="7" value="1"/>
+    <br>
+    <input type="range" id="plantInput" class="slider" min="1" max="7" value="1"/>
+    <br>
+    <input type="range" id="plantInput" class="slider" min="1" max="7" value="1"/>
+    <br>
+    <input type="range" id="plantInput" class="slider" min="1" max="7" value="1"/>
+    `;
+}
 
 function addTask() {
     plants.push({
