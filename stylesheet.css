@@ -117,6 +117,18 @@ th {
     cursor: pointer;
 }
 
+.inputValueBox {
+    color: rgb(4, 107, 18);
+    background-color: rgb(169, 218, 175);
+    border: solid;
+    border-color: rgb(169, 218, 175);
+    border-radius: 5px;
+    float: left;
+    margin-top: 10px;
+    padding: 3px;
+    height: 16px;
+}
+
 img {
     width: 50%;
     float: left;
@@ -133,7 +145,7 @@ h3 {
     margin-top: 10px;
     float: left;
     -webkit-appearance: none;
-    width: 10%;
+    width: 5%;
     height: 27px;
     border-radius: 7px;  
     background: rgb(169, 218, 175);
@@ -144,7 +156,7 @@ h3 {
   .slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
-    width: 17px;
+    width: 10px;
     height: 17px;
     border-radius: 50%; 
     background: rgb(4, 107, 18);
