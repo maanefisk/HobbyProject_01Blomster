@@ -16,8 +16,8 @@ var container = document.getElementById('container');
 
 //model
 let plants = [
-        { id: 'salvie', name: 'Salvia Officinalis' , water: 7, feed: 14 , cut: 14, pot: 365, },
-        { id: 'løvemunn', name: 'Antirrhinum majus' , water: 2, feed: 7 , cut: 7, pot: 365, },
+        { id: 'salvie', name: 'Salvie' , latinName: 'Salvia Officinalis' , water: 7, feed: 14 , cut: 14, pot: 365, },
+        { id: 'løvemunn', name: 'Løvemunn' , latinName: 'Antirrhinum majus' , water: 2, feed: 7 , cut: 7, pot: 365, },
     ];
 updateView();    
 //view
@@ -30,16 +30,7 @@ function updateView() {
 
 
     <table id="plantsList" class="plantsList">`
-    let html = `
-        <tr>
-            <th>Salvie</th>
-            <th>💧</th>
-            <th>❤</th>
-            <th>✂</th>
-            <th>🞲</th>
-            <th>🡺</th>
-        </tr>
-        `
+    let html = ''
     let thirdHtml = `    
     </table>
 
@@ -55,11 +46,11 @@ function updateView() {
         <option>Collection 1</option>
         <option>Collection 2</option>
     </select>
-    <input type="text" class="button2"/><button class="button3">Add</button>
+    <input type="text" id="plantInput" class="button2"/><button onclick="addTask()" class="button3">Add</button>
 
     </div>
         `;
-    for (let i = 1; i < plants.length; i++){
+    for (let i = 0; i < plants.length; i++){
          html += createHtmlRow(i) ;
     }
     container.innerHTML = firstHtml + html + thirdHtml;
@@ -68,11 +59,26 @@ function updateView() {
 
     
 //controller
+
+let plantInput = document.getElementById('plantInput');
+
+function addTask() {
+    plants.push({
+        id: 'navnher', 
+        name: plantInput.value, 
+        water: 2, 
+        feed: 7 , 
+        cut: 7, 
+        pot: 365,
+    });
+    updateView();
+}
+
 function createHtmlRow(i) {
     const plant = plants[i];
     return `
     <tr>
-            <th>Løvemunn</th>
+            <th>${plants[i].name}</th>
             <th>💧</th>
             <th>❤</th>
             <th>✂</th>
@@ -81,6 +87,7 @@ function createHtmlRow(i) {
         </tr>
     `;
 }
+
 
 function todaysDate() {
     var n = new Date();
