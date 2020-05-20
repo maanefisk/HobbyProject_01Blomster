@@ -70,14 +70,14 @@ let dateButton = document.getElementById('dateButton');
 
 function openTimeSliders() {
     dateButton.innerHTML = `
-    <input type="text" id="waterInput" class="inputValueBox"/>
-    <input type="range" onchange="innerValue()" id="waterSlider" class="slider" min="0" max="7" value="1"/>
-    <input type="text" id="feederInput" class="inputValueBox"/>
-    <input type="range" onchange="innerValue()" id="feederSlider" class="slider" min="0" max="12" value="1"/>
-    <input type="text" id="cutInput" class="inputValueBox"/>
-    <input type="range" onchange="innerValue()" id="cutSlider" class="slider" min="0" max="12" value="1"/>
-    <input type="text" id="potInput" class="inputValueBox"/>
-    <input type="range" onchange="innerValue()" id="potSlider" class="slider" min="0" max="1" value="1"/>
+    <input type="text" id="waterInput" class="inputValueBox" value="Til neste 💧"/>
+    <input type="range" onchange="innerValue()" id="waterSlider" class="slider" min="1" max="7" value="1"/>
+    <input type="text" id="feederInput" class="inputValueBox" value="Til neste ❤"/>
+    <input type="range" onchange="innerValue()" id="feederSlider" class="slider" min="0" max="84" step="7" value="0"/>
+    <input type="text" id="cutInput" class="inputValueBox" value="Til neste ✂"/>
+    <input type="range" onchange="innerValue()" id="cutSlider" class="slider" min="0" max="365" value="0" step="7"/>
+    <input type="text" id="potInput" class="inputValueBox" value="Til neste 🞲"/>
+    <input type="range" onchange="innerValue()" id="potSlider" class="slider" min="0" max="365" value="365" step="365"/>
     `;
     
 }
@@ -91,16 +91,15 @@ function innerValue() {
     let cutSlider = document.getElementById('cutSlider');
     let potInput = document.getElementById('potInput');
     let potSlider = document.getElementById('potSlider');
-    waterInput.value = waterSlider.value + ' Dag(er) imellom 💧';
-    feederInput.value = feederSlider.value + ' Dag(r) imellom ❤';
-    cutInput.value = cutSlider.value + ' Dager(r) imellom ✂';
-    potInput.value = potSlider.value + ' Dager(r) imellom 🞲';
+    waterInput.value = waterSlider.value + ' Til neste 💧';
+    feederInput.value = feederSlider.value + ' Til neste ❤';
+    cutInput.value = cutSlider.value + ' Til neste ✂';
+    potInput.value = potSlider.value + ' Til neste 🞲';
 }
 
 function addTask() {
     if (plantInput.value > '') {
-       plants.push({
-        id: 'navnher', 
+       plants.push({ 
         name: plantInput.value, 
         water: waterSlider.value, 
         feed: feederSlider.value , 
