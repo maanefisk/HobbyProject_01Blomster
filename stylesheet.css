@@ -119,9 +119,9 @@ th {
 
 .inputValueBox {
     color: rgb(4, 107, 18);
-    background-color: rgb(169, 218, 175);
+    background-color: rgb(255, 249, 217);
     border: solid;
-    border-color: rgb(169, 218, 175);
+    border-color: rgb(252, 236, 17);
     border-radius: 5px;
     float: left;
     margin-top: 10px;
@@ -145,7 +145,7 @@ h3 {
     margin-top: 10px;
     float: left;
     -webkit-appearance: none;
-    width: 5%;
+    width: 6%;
     height: 27px;
     border-radius: 7px;  
     background: rgb(169, 218, 175);
